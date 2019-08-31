@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-aws-s3",
+  "version": "1.0.0",
+  "description": "upload/download to aws s3 with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.521.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "dotenv": "^8.1.0",
+    "nodemon": "^1.19.1"
+  }
+}
