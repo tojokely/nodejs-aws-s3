@@ -15,12 +15,12 @@ const ext = '.txt'
 
 
 //need to put file in /data
-export const aws_upload = (f) => {
+export const aws_upload = (f,d) => {
 
   //configuring parameters
   const params = {
     Bucket: process.env.AWS_BUCKET,
-    Body : f.data,
+    Body : d,
     Key : "folder/"+Date.now()+"_"+f.name
   };
 
@@ -48,7 +48,7 @@ export const aws_upload = (f) => {
 export const aws_download = (res) => {
   const ext = '.mp3'
   const filePath = path.join('temp', 'x' + ext);
-  
+
   const params = {
     Bucket: process.env.AWS_BUCKET,
     Key: 'folder/1567163054411_s.mp3'

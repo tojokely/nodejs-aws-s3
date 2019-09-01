@@ -17,7 +17,7 @@ export const upload = (req, res) => {
       //read file and upload data (stream)
       fs.readFile(file.tempFilePath, function(err,data) {
         if (err) throw err; // Something went wrong!
-        aws_upload(file)
+        aws_upload(file,data)
       })
 
       //send response
